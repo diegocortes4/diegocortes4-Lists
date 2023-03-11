@@ -1,4 +1,4 @@
-
+import java.util.*;
 import java.util.List;
 
 /**
@@ -29,7 +29,9 @@ public class Lab {
      * @return a List<Integer> object.
      */
     public List<Integer> createList(){
-        return null;
+      // ArrayList<String> cars = new ArrayList<String>();
+        List<Integer> newList = new ArrayList<>();
+        return newList;
     }
 
     /**
@@ -38,9 +40,19 @@ public class Lab {
      * @param list a List<Integer> object.
      * @return the size of List (number of items it holds.)
      */
-    public int getSize(List<Integer> list){
-        return 0;
-    }
+   // public int getSize(List<Integer> list){
+     //   List<Integer> newList;
+      //  int size = newList.size();
+      /**
+     * @param newList
+     * @return
+     */
+    public int getSize(List<Integer> newList){
+        int size = newList.size();
+      
+        return size;
+      
+    } 
 
     /**
      * Add an item to a list.
@@ -51,6 +63,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addToList(List<Integer> list, int value){
+       // list.add(value);
+       list.add(value);
     }
 
     /**
@@ -66,7 +80,9 @@ public class Lab {
      * @return the int at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-        return 0;
+        return list.get(index);
+        //return 1;
+        //return (0);
     }
 
     /**
@@ -76,9 +92,11 @@ public class Lab {
      *
      * @param list a List<Integer> object that we would like to modify.
      * @param position represents the index of the element we would like to remove.
+     * @return 
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void removeFromList(List<Integer> list, int position){
+    public Integer removeFromList(List<Integer> list, int position){
+        return list.remove(position);
 
     }
 
@@ -92,5 +110,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void updateAtPosition(List<Integer> list, int position, int value){
+       // list.set(0, 1);
+        list.set(position, value);
+        
     }
 }
